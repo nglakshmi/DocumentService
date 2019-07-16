@@ -1,0 +1,27 @@
+
+spring:
+  jmx:
+    default-domain: test123
+  application:
+    name: file-service
+  datasource:
+    url: "jdbc:h2:mem:test;MODE=MySQL;INIT=CREATE SCHEMA IF NOT EXISTS CGNZNT"
+    password:
+    username: "sa"
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  devtools:
+    livereload:
+      enabled: false
+storage:
+  id-length: 20
+server:
+  port: 8081
